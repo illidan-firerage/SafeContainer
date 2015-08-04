@@ -16,9 +16,13 @@
 
 @implementation QMSafeMutableArray
 
-- (id)init
+- (instancetype)init
 {
-    return [self initWithCapacity:0];
+    self = [super init];
+    if (self) {
+        [self configWithCapacity:0];
+    }
+    return self;
 }
 
 - (id)initWithCapacity:(NSUInteger)numItems
@@ -26,10 +30,15 @@
     self = [super init];
     if (self)
     {
-        _safeLock = [[NSRecursiveLock alloc] init];
-        _array = CFArrayCreateMutable(kCFAllocatorDefault, numItems,  &kCFTypeArrayCallBacks);
+        [self configWithCapacity:numItems];
     }
     return self;
+}
+
+- (void)configWithCapacity:(NSUInteger)numItems
+{
+    _safeLock = [[NSRecursiveLock alloc] init];
+    _array = CFArrayCreateMutable(kCFAllocatorDefault, numItems,  &kCFTypeArrayCallBacks);
 }
 
 - (void)dealloc

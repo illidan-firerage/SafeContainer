@@ -51,6 +51,7 @@ void testSafe(void)
             for (id item in safeArray)
             {
                 //do something
+                NSLog(@"%@", item);
             }
             [safeArray unlock];
         }];

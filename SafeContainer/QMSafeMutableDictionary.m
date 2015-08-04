@@ -16,9 +16,13 @@
 
 @implementation QMSafeMutableDictionary
 
-- (id)init
+- (instancetype)init
 {
-    return [self initWithCapacity:0];
+    self = [super init];
+    if (self) {
+        [self configWithCapacity:0];
+    }
+    return self;
 }
 
 - (id)initWithCapacity:(NSUInteger)numItems
@@ -26,12 +30,17 @@
     self = [super init];
     if (self)
     {
-        _safeLock = [[NSRecursiveLock alloc] init];
-        _dictionary = CFDictionaryCreateMutable(kCFAllocatorDefault, numItems,
-                                                &kCFTypeDictionaryKeyCallBacks,
-                                                &kCFTypeDictionaryValueCallBacks);
+        [self configWithCapacity:numItems];
     }
     return self;
+}
+
+- (void)configWithCapacity:(NSUInteger)numItems
+{
+    _safeLock = [[NSRecursiveLock alloc] init];
+    _dictionary = CFDictionaryCreateMutable(kCFAllocatorDefault, numItems,
+                                            &kCFTypeDictionaryKeyCallBacks,
+                                            &kCFTypeDictionaryValueCallBacks);
 }
 
 - (id)initWithObjects:(const id [])objects forKeys:(const id<NSCopying> [])keys count:(NSUInteger)cnt
