@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		139216C41B75B55600753084 /* QMSafeMutableArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 139216C11B75B55600753084 /* QMSafeMutableArray.m */; };
+		139216C51B75B55600753084 /* QMSafeMutableDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 139216C31B75B55600753084 /* QMSafeMutableDictionary.m */; };
 		B8B0AA8318C958E3001D337B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8B0AA8218C958E3001D337B /* Foundation.framework */; };
 		B8B0AA8618C958E3001D337B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B8B0AA8518C958E3001D337B /* main.m */; };
 		B8B0AA8A18C958E3001D337B /* SafeContainer.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = B8B0AA8918C958E3001D337B /* SafeContainer.1 */; };
-		B8B0AA9418C958F4001D337B /* QMSafeMutableArray.m in Sources */ = {isa = PBXBuildFile; fileRef = B8B0AA9118C958F4001D337B /* QMSafeMutableArray.m */; };
-		B8B0AA9518C958F4001D337B /* QMSafeMutableDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = B8B0AA9318C958F4001D337B /* QMSafeMutableDictionary.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,15 +28,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		139216C01B75B55600753084 /* QMSafeMutableArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QMSafeMutableArray.h; sourceTree = "<group>"; };
+		139216C11B75B55600753084 /* QMSafeMutableArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QMSafeMutableArray.m; sourceTree = "<group>"; };
+		139216C21B75B55600753084 /* QMSafeMutableDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QMSafeMutableDictionary.h; sourceTree = "<group>"; };
+		139216C31B75B55600753084 /* QMSafeMutableDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QMSafeMutableDictionary.m; sourceTree = "<group>"; };
 		B8B0AA7F18C958E3001D337B /* SafeContainer */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SafeContainer; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8B0AA8218C958E3001D337B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B8B0AA8518C958E3001D337B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B8B0AA8818C958E3001D337B /* SafeContainer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SafeContainer-Prefix.pch"; sourceTree = "<group>"; };
 		B8B0AA8918C958E3001D337B /* SafeContainer.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = SafeContainer.1; sourceTree = "<group>"; };
-		B8B0AA9018C958F4001D337B /* QMSafeMutableArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QMSafeMutableArray.h; sourceTree = "<group>"; };
-		B8B0AA9118C958F4001D337B /* QMSafeMutableArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QMSafeMutableArray.m; sourceTree = "<group>"; };
-		B8B0AA9218C958F4001D337B /* QMSafeMutableDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QMSafeMutableDictionary.h; sourceTree = "<group>"; };
-		B8B0AA9318C958F4001D337B /* QMSafeMutableDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QMSafeMutableDictionary.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +51,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		139216BF1B75B55600753084 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				139216C01B75B55600753084 /* QMSafeMutableArray.h */,
+				139216C11B75B55600753084 /* QMSafeMutableArray.m */,
+				139216C21B75B55600753084 /* QMSafeMutableDictionary.h */,
+				139216C31B75B55600753084 /* QMSafeMutableDictionary.m */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
 		B8B0AA7618C958E3001D337B = {
 			isa = PBXGroup;
 			children = (
@@ -79,10 +90,7 @@
 		B8B0AA8418C958E3001D337B /* SafeContainer */ = {
 			isa = PBXGroup;
 			children = (
-				B8B0AA9018C958F4001D337B /* QMSafeMutableArray.h */,
-				B8B0AA9118C958F4001D337B /* QMSafeMutableArray.m */,
-				B8B0AA9218C958F4001D337B /* QMSafeMutableDictionary.h */,
-				B8B0AA9318C958F4001D337B /* QMSafeMutableDictionary.m */,
+				139216BF1B75B55600753084 /* Sources */,
 				B8B0AA8518C958E3001D337B /* main.m */,
 				B8B0AA8918C958E3001D337B /* SafeContainer.1 */,
 				B8B0AA8718C958E3001D337B /* Supporting Files */,
@@ -149,9 +157,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B8B0AA9518C958F4001D337B /* QMSafeMutableDictionary.m in Sources */,
+				139216C41B75B55600753084 /* QMSafeMutableArray.m in Sources */,
+				139216C51B75B55600753084 /* QMSafeMutableDictionary.m in Sources */,
 				B8B0AA8618C958E3001D337B /* main.m in Sources */,
-				B8B0AA9418C958F4001D337B /* QMSafeMutableArray.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
